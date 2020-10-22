@@ -2,13 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="adcce60c-c388-49bd-8572-58637d841012" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/hocs/HOC1.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hocs/OldApp_exclude.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hocs/hoc2/HOC2.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hocs/hoc2/List.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/hocs/hoc2/WithdLoading.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hocs/hoc2/HOC2.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hocs/hoc2/HOC2.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hocs/hoc2/List.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hocs/hoc2/List.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hocs/hoc2/WithdLoading.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/hocs/hoc2/WithdLoading.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +59,7 @@
       <updated>1603329024839</updated>
       <workItem from="1603329027682" duration="88000" />
       <workItem from="1603329136205" duration="66000" />
-      <workItem from="1603340607504" duration="5719000" />
+      <workItem from="1603340607504" duration="8445000" />
     </task>
     <servers />
   </component>
@@ -74,5 +71,9 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1603329112351" />
+    <state x="616" y="240" key="run.anything.popup" timestamp="1603347934196">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="616" y="240" key="run.anything.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1603347934196" />
   </component>
 </project>
