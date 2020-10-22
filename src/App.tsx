@@ -1,63 +1,148 @@
+import React from "react";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link
+} from "react-router-dom";
 
-import React, { useEffect, useRef, useState } from 'react';
-// import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+export default function App() {
+  return (
+    <Router>
+      <div>
+        <nav>
+          <ul>
+            <li>
+              <Link to="/">Home</Link>
+            </li>
+            <li>
+              <Link to="/about">About</Link>
+            </li>
+            <li>
+              <Link to="/users">Users</Link>
+            </li>
+          </ul>
+        </nav>
 
-function App() {
+        {/* A <Switch> looks through its children <Route>s and
+            renders the first one that matches the current URL. */}
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/users">
+            <Users />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
+}
 
+function Home() {
+  return <h2>Home</h2>;
+}
 
+function About() {
+  return <h2>About</h2>;
+}
 
-  // snapshot:  {
-  const snapshot = {
-    "bytesTransferred": 6274462,
-    "metadata": {
-      "bucket": "monozseptember2020.appspot.com",
-
-      "cacheControl": "no-store",
-      "contentDisposition": "inline;filename*=utf- 8''% E0 % A6 % 95 % E0 % A6 % 96 % E0 % A6 % 970D2X5Rth7.jpeg",
-      "contentEncoding": "identity",
-    "contentLanguage": null,
-    "contentType": "image/jpeg",
-    "customMetadata": {
-      "height": "3000",
-      "itemName": "কখগ",
-      "width": "4000"
-    },
-    "fullPath": "images/mhmdarefin@gmail.comNew/কখগ0D2X5Rth7.jpeg",
-    "generation": "1601110251026764",
-    "md5Hash": "S9asvRGAPXtmjwJDBts0qA==",
-    "metageneration": "1",
-    "name": "কখগ0D2X5Rth7.jpeg",
-
-    "size": 6274462,
-    "timeCreated": "2020-09-26T14:50:51Z",
-    "updated": "2020-09-26T14:50:51Z"
-  }, "state": "success",
-    "totalBytes": 6274462
-};
-
-
-
-return (
-  <div className="App">
-    <header className="App-header">
-      <img src={logo} className="App-logo" alt="logo" />
-      <p>
-        Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-      <a
-        className="App-link"
-        href="https://reactjs.org"
-        target="_blank"
-        rel="noopener noreferrer"
-      >
-        Learn React
-        </a>
-    </header>
-  </div>
-);
+function Users() {
+  return <h2>Users</h2>;
 }
 
 
-export default App;
+// 2nd Example: Nested Routing
+// This example shows how nested routing works. The route /topics loads the Topics component, which renders any further <Route>'s conditionally on the paths :id value.import React from "react";
+
+
+/*
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Link,
+  useRouteMatch,
+  useParams
+} from "react-router-dom";
+
+export default function App() {
+  return (
+    <Router>
+      <div>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+          <li>
+            <Link to="/topics">Topics</Link>
+          </li>
+        </ul>
+
+        <Switch>
+          <Route path="/about">
+            <About />
+          </Route>
+          <Route path="/topics">
+            <Topics />
+          </Route>
+          <Route path="/">
+            <Home />
+          </Route>
+        </Switch>
+      </div>
+    </Router>
+  );
+}
+
+function Home() {
+  return <h2>Home</h2>;
+}
+
+function About() {
+  return <h2>About</h2>;
+}
+
+function Topics() {
+  let match = useRouteMatch();
+
+  return (
+    <div>
+      <h2>Topics</h2>
+
+      <ul>
+        <li>
+          <Link to={`${match.url}/components`}>Components</Link>
+        </li>
+        <li>
+          <Link to={`${match.url}/props-v-state`}>
+            Props v. State
+          </Link>
+        </li>
+      </ul>
+
+     }
+      <Switch>
+        <Route path={`${match.path}/:topicId`}>
+          <Topic />
+        </Route>
+        <Route path={match.path}>
+          <h3>Please select a topic.</h3>
+        </Route>
+      </Switch>
+    </div>
+  );
+}
+
+function Topic() {
+  let { topicId } = useParams();
+  return <h3>Requested topic ID: {topicId}</h3>;
+}
+
+*/
