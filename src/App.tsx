@@ -1,4 +1,5 @@
 import React from "react";
+import HomePage from './homePage/HomePage'
 import {
   BrowserRouter as Router,
   Switch,
@@ -15,12 +16,21 @@ export default function App() {
             <li>
               <Link to="/">Home</Link>
             </li>
+
+           
+
             <li>
               <Link to="/about">About</Link>
             </li>
             <li>
               <Link to="/users">Users</Link>
             </li>
+
+            <li>
+              <Link to="/home2">Home2222</Link>
+            </li>
+
+
           </ul>
         </nav>
 
@@ -33,8 +43,14 @@ export default function App() {
           <Route path="/users">
             <Users />
           </Route>
+
+         
           <Route path="/">
-            <Home />
+            <Home/>
+          </Route>
+
+          <Route path="/home2">
+            <HomePage/>
           </Route>
         </Switch>
       </div>
@@ -44,6 +60,10 @@ export default function App() {
 
 function Home() {
   return <h2>Home</h2>;
+
+  // return <Home/>;
+
+  
 }
 
 function About() {
