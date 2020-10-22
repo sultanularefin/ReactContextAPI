@@ -1,5 +1,9 @@
 import React from "react";
 import HomePage from './homePage/HomePage'
+
+import HOC1 from './hocs/HOC1';
+import HOC2 from './hocs/hoc2/HOC2';
+
 import {
   BrowserRouter as Router,
   Switch,
@@ -29,6 +33,16 @@ export default function App() {
             </li>
 
             <li>
+              <Link to="/hoc1">HOC1</Link>
+            </li>
+
+
+            <li>
+              <Link to="/hoc2">HOC2</Link>
+            </li>
+
+
+            <li>
               <Link to="/">Home</Link>
             </li>
 
@@ -45,6 +59,18 @@ export default function App() {
           <Route path="/users">
             <Users />
           </Route>
+
+          <Route path="/hoc1">
+            <HOC1 />
+          </Route>
+
+
+
+
+          <Route path="/hoc2">
+            <HOC2 />
+          </Route>
+
 
           <Route path="/home2">
             <HomePage/>
