@@ -7,151 +7,56 @@ import './App.css';
 function App() {
 
 
-  const [avatarSourceStateEdit, setAvatarSourceStateEdit] = useState(
-    new Array<{
-      fileName: string, // name before query string...
-      uri: string,
-      width: number;
-      duration?: number;
-      height: number;
-      mime: string;
-      modificationDate: string;
-      // path:string
-      size: number;
-    }>()
 
-  );
+  // snapshot:  {
+  const snapshot = {
+    "bytesTransferred": 6274462,
+    "metadata": {
+      "bucket": "monozseptember2020.appspot.com",
 
-  // const pushedMetaDatas: {
-  //   fileName:string,
-  //   itemName:string,
-  //   width:number,
-  //   contentType:string,
-  //   height:number
-  // }[]=[];
+      "cacheControl": "no-store",
+      "contentDisposition": "inline;filename*=utf- 8''% E0 % A6 % 95 % E0 % A6 % 96 % E0 % A6 % 970D2X5Rth7.jpeg",
+      "contentEncoding": "identity",
+    "contentLanguage": null,
+    "contentType": "image/jpeg",
+    "customMetadata": {
+      "height": "3000",
+      "itemName": "কখগ",
+      "width": "4000"
+    },
+    "fullPath": "images/mhmdarefin@gmail.comNew/কখগ0D2X5Rth7.jpeg",
+    "generation": "1601110251026764",
+    "md5Hash": "S9asvRGAPXtmjwJDBts0qA==",
+    "metageneration": "1",
+    "name": "কখগ0D2X5Rth7.jpeg",
 
-
-  let i = 0;
-
-  const imageURL2 = ['abc', 'def'];
-
-
-  if (imageURL2.length !== 0) {
-    //const pushedMetaDatas: any[]=[];// THIS WORKED...  
-
-
-    const pushedMetaDatas: {
-      fileName: string,
-      itemName: string,
-      width: number,
-      contentType: string,
-      height: number
-    }[] = [];
-
-
-    try {
-
-      for (i; i < imageURL2.length; i++) {
-
-        console.log('i is => ', i);
+    "size": 6274462,
+    "timeCreated": "2020-09-26T14:50:51Z",
+    "updated": "2020-09-26T14:50:51Z"
+  }, "state": "success",
+    "totalBytes": 6274462
+};
 
 
 
-        const additionalData = {
-          fileName: 'a'+i+'',
-          contentType: 'a'+i+'',
-          width: 1,
-          height: 1,
-          itemName: 'a'+i+'',
-        }
-
-
-
-        console.log('additionalData.fileName', additionalData.fileName);
-        console.log('additionalData.itemName', additionalData.itemName);
-        console.log('additionalData.width', additionalData.width);
-        console.log('additionalData.contentType', additionalData.contentType);
-        console.log('additionalData.height', additionalData.height);
-
-        // pushedMetaDatas.push({...additionalData});
-
-        pushedMetaDatas.push({ ...additionalData });
-
-
-        //all all the urls to the list
-        console.log('i is : ', i);
-        // console.log('pushedMetaDatas[i].fileName: ',pushedMetaDatas[i].fileName);
-
-      }
-    }
-    catch (e) {
-      console.log('e: ', e);
-    }
-
-    console.log('pushedMetaDatas: ', pushedMetaDatas);
-
-    //setAvatarSourceStateEdit(pushedMetaDatas);
-
-
-
-  }
-
-  console.log('not imageURL ', !imageURL2);
-
-
-
-
-
-
-
-  // console.log('pushedMetaDatas[0].fileName',pushedMetaDatas[0].fileName);
-  // console.log('pushedMetaDatas[0].itemName',pushedMetaDatas[0].itemName);
-  // console.log('pushedMetaDatas[0].width',pushedMetaDatas[0].width);
-  // console.log('pushedMetaDatas[0].contentType',pushedMetaDatas[0].contentType);
-  // console.log('pushedMetaDatas[0].height',pushedMetaDatas[0].height);
-
-  /*
-  
-   
-    
-     
-  
-  
-  */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
+return (
+  <div className="App">
+    <header className="App-header">
+      <img src={logo} className="App-logo" alt="logo" />
+      <p>
+        Edit <code>src/App.tsx</code> and save to reload.
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
+      <a
+        className="App-link"
+        href="https://reactjs.org"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Learn React
         </a>
-      </header>
-    </div>
-  );
+    </header>
+  </div>
+);
 }
 
 
