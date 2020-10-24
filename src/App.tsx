@@ -3,6 +3,7 @@ import HomePage from './homePage/HomePage'
 
 import HOC1 from './hocs/HOC1';
 import HOC2 from './hocs/hoc2/HOC2';
+import HOC3TZ from './hocs/hoc3TZ/HOC3TZ';
 
 import {
   BrowserRouter as Router,
@@ -43,6 +44,10 @@ export default function App() {
 
 
             <li>
+              <Link to="/hoc3TZ">HOC3TZ</Link>
+            </li>
+
+            <li>
               <Link to="/">Home</Link>
             </li>
 
@@ -69,6 +74,10 @@ export default function App() {
 
           <Route path="/hoc2">
             <HOC2 />
+          </Route>
+
+          <Route path="/hoc3TZ">
+          <HOC3TZ/>
           </Route>
 
 
