@@ -13,6 +13,12 @@ import {
 } from "react-router-dom";
 
 export default function App() {
+
+  // console.log('__________',ThreeSum([10, 2, 3, 1, 5, 3, 1, 4, -4, -3, -2]));
+
+  console.log(LetterCount("Today, is the greatest day ever!"));
+
+
   return (
     <Router>
       <div>
@@ -20,7 +26,7 @@ export default function App() {
           <ul>
 
 
-           
+
 
             <li>
               <Link to="/about">About</Link>
@@ -77,15 +83,15 @@ export default function App() {
           </Route>
 
           <Route path="/hoc3TZ">
-          <HOC3TZ/>
+            <HOC3TZ />
           </Route>
 
 
           <Route path="/home2">
-            <HomePage/>
+            <HomePage />
           </Route>
           <Route path="/">
-            <Home/>
+            <Home />
           </Route>
 
 
@@ -95,12 +101,149 @@ export default function App() {
   );
 }
 
+let count = -1;
+let finalString = "";
+
+const checkletterCount = (letters: string) => {
+
+
+  const mySet = new Set(letters);
+
+  const mySet2 = Array.from(mySet);
+
+  if (letters.length === mySet2.length) {
+
+    //console.log('at here.. letters.length === mySet2.length', (letters.length === mySet2.length));
+    // count = - 1;
+    return;
+  }
+  else {
+    // console.log('-------------');
+    let counter2 = 0;
+
+    const cache: any = {}; // we will check if it has repeated letters
+
+
+    for (var i = 0; i < letters.length; i++) {
+     
+      if (cache.hasOwnProperty(letters[i])) { // if letter was already seen
+        counter2 = counter2 + 1;
+      };
+      cache[letters[i]] = 1; // if not, its the first time we see this letter, mark it
+      // return false; // and continue
+    }
+
+
+
+    if ((counter2 >= 1) && (counter2 > count)) {
+      // console.log()
+      // console.log('count: ', count);
+      // console.log('counter2: ', counter2);
+      // console.log('counter2>count: ', counter2 > count);
+
+      count = counter2;
+      finalString = letters;
+      // console.log('finalString:-------- ', finalString);
+      // console.log('count: ', count);
+    }
+
+
+    // console.log('count:: ', count);
+
+    // console.log('finalString: ', finalString);
+
+
+
+  }
+
+};
+
+function LetterCount(str: string) {
+
+  // code goes here  
+
+
+  const words = str.split(' ');
+
+  words.map((x: string) => checkletterCount(x));
+  console.log(finalString);
+  return str;
+
+}
+
+//   console.log(LetterCount(readline()));
+
+
+
+const checkThisNumberInAllNumbers = (oneNumber: number, allNumbers: [number]) => {
+
+  const booleanResult = allNumbers.includes(oneNumber);
+  return booleanResult;
+
+};
+
+
+const result: Array<number> = [];
+result.length = 3;
+let found = false;
+
+function combinations(input: Array<number>, len: number, start: number, firstNumber: number) {
+  if (len === 0) {
+    const sum = result.reduce(function (a, b) {
+      return a + b;
+    }, 0);
+
+    // console.log('sum: ', sum);
+    if (firstNumber === sum) {
+      // console.log('firstNumber: ', sum);
+      // return "true";
+      found = true;
+      // break;
+    }
+    // return "false";
+    // continue;
+    return;
+  }
+  for (let i = start; i <= input.length - len; i++) {
+    result[result.length - len] = input[i];
+    combinations(input, len - 1, i + 1, firstNumber);
+  }
+}
+
+
+// console.log('allResults: ', allResults);
+
+function ThreeSum(ints: Array<number>) {
+
+
+  const firstNumber = ints[0];
+
+  const otherNumber = ints.slice(1, ints.length);
+  const mySet = new Set(otherNumber);
+
+  // const original =[2,3,1,5,4,-4,-3,-2]; 
+  const mySet2 = Array.from(mySet);
+  combinations(mySet2, result.length, 0, firstNumber);
+
+  let finalResult = found;
+
+  console.log('finalResult: ', finalResult);
+
+  // return ints.length; 
+
+}
+
+// keep this function call here 
+// console.log(ThreeSum(readline()));
+
+
+
 function Home() {
   return <h2>Home</h2>;
 
   // return <Home/>;
 
-  
+
 }
 
 function About() {
