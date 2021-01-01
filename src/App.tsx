@@ -16,7 +16,7 @@ export default function App() {
 
   // console.log('__________',ThreeSum([10, 2, 3, 1, 5, 3, 1, 4, -4, -3, -2]));
 
-  console.log(LetterCount("Today, is the greatest day ever!"));
+  console.log( "Result: ", LetterCount("Today, is the greatest day ever!"));
 
 
   return (
@@ -121,6 +121,47 @@ const checkletterCount = (letters: string) => {
     // console.log('-------------');
     let counter2 = 0;
 
+
+
+    /*
+
+    # hasOwnProperty:
+
+    const object1 = {};
+object1.property1 = 42;
+
+console.log(object1.hasOwnProperty('property1'));
+// expected output: true
+
+console.log(object1.hasOwnProperty('toString'));
+// expected output: false
+
+console.log(object1.hasOwnProperty('hasOwnProperty'));
+// expected output: false
+
+# in && delete in javaScript:
+
+const car = { make: 'Honda', model: 'Accord', year: 1998 };
+console.log("car: ", car);
+
+console.log('make' in car);
+// expected output: true
+
+delete car.make;
+
+console.log("car: ", car);
+
+if ('make' in car === false) {
+  car.make = 'Suzuki';
+}
+
+console.log("car: ", car);
+
+console.log(car.make);
+// expected output: "Suzuki"
+
+
+    */
     const cache: any = {}; // we will check if it has repeated letters
 
 
@@ -166,8 +207,9 @@ function LetterCount(str: string) {
   const words = str.split(' ');
 
   words.map((x: string) => checkletterCount(x));
-  console.log(finalString);
-  return str;
+  // console.log(finalString);
+  console.log('input string: ', str);
+  return finalString;
 
 }
 
@@ -235,6 +277,14 @@ function ThreeSum(ints: Array<number>) {
 
 // keep this function call here 
 // console.log(ThreeSum(readline()));
+
+
+
+/*
+
+greatest
+App.tsx:19 Today, is the greatest day ever!
+*/
 
 
 
