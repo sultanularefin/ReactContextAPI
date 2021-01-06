@@ -14,7 +14,7 @@ import {
 
 export default function App() {
 
-  // console.log('__________',ThreeSum([10, 2, 3, 1, 5, 3, 1, 4, -4, -3, -2]));
+  console.log('__________ ThreeSum',ThreeSum([10, 2, 3, 1, 5, 3, 1, 4, -4, -3, -2]));
 
   console.log( "Result: ", LetterCount("Today, is the greatest day ever!"));
 
@@ -100,6 +100,79 @@ export default function App() {
     </Router>
   );
 }
+
+
+const result:Array<number> = [];
+result.length = 3;
+let found = false;
+
+// function combinations(input:Array<number>, len:number, start:number, firstNumber:number) {
+//   if(len === 0) {
+
+//     const sum = result.reduce(function(a, b){
+//         return a + b;
+//     }, 0);
+
+//     // console.log('sum: ', sum);
+
+//     if(firstNumber === sum){
+
+//       // console.log('firstNumber: ', sum);
+//       // return "true";
+
+//       found = true;
+//       // break;
+//     }
+
+//     // return "false";
+//     // continue;
+//     return;
+//   }
+//   for (let i = start; i <= input.length - len; i++) {
+//     result[result.length - len] = input[i];
+//     combinations(input, len-1, i+1,firstNumber );
+//   }
+// }
+
+// function ThreeSum(arr) { 
+
+//   const firstNumber = arr[0];
+
+//   const otherNumber = arr.slice(1, arr.length);
+//   const  mySet = new Set(otherNumber);
+
+
+//   const mySet2 = Array.from(mySet);
+//  combinations(mySet2, result.length, 0,firstNumber);
+
+
+
+//   return found;
+
+// }
+   
+// keep this function call here 
+// @ts-ignore
+// console.log(ThreeSum(readline()));
+
+
+// function LetterCount(str: string) { 
+
+//     // code goes here  
+
+    
+//     const words = str.split(' ');
+
+//     console.log('words: ', words);
+//     return str; 
+  
+//   }
+
+//   console.log(LetterCount(readline()));
+
+
+  // console.log(LetterCount("Today, is the greatest day ever!"));
+
 
 let count = -1;
 let finalString = "";
@@ -225,9 +298,14 @@ const checkThisNumberInAllNumbers = (oneNumber: number, allNumbers: [number]) =>
 };
 
 
-const result: Array<number> = [];
-result.length = 3;
-let found = false;
+// const result: Array<number> = [];
+// result.length = 3;
+// let found = false;
+
+
+// invoker method: combinations(mySet2, result.length, 0, firstNumber);
+// results.length: 3
+
 
 function combinations(input: Array<number>, len: number, start: number, firstNumber: number) {
   if (len === 0) {
@@ -246,8 +324,13 @@ function combinations(input: Array<number>, len: number, start: number, firstNum
     // continue;
     return;
   }
+
+  // // const original =[2,3,1,5,4,-4,-3,-2];
+  // i =0; i<= 8-3; i++
   for (let i = start; i <= input.length - len; i++) {
+    // result [3-3] =input [0];
     result[result.length - len] = input[i];
+    // combinations(original, 3-1, 0+1, firstNumber)
     combinations(input, len - 1, i + 1, firstNumber);
   }
 }
@@ -260,16 +343,45 @@ function ThreeSum(ints: Array<number>) {
 
   const firstNumber = ints[0];
 
-  const otherNumber = ints.slice(1, ints.length);
+  // slice: a slice of the company's revenue
+  // slice : a share of something.
+
+    // splice: a junction where two things ( as paper, film or magnetic tape) have been joined together.
+
+    // "The couple got spliced on Hawaii"
+    //  Perform a marriage ceremony
+    // const months = ['Jan', 'March', 'April', 'June'];
+    // months.splice(1, 0, 'Feb');
+
+    // let arrDeletedItems = array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+
+
+    // const otherNumber = ints.slice(1, ints.length);
+  const otherNumber = ints.slice(1, ints.length-1);
+
+  // The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end
+
+
   const mySet = new Set(otherNumber);
 
   // const original =[2,3,1,5,4,-4,-3,-2]; 
   const mySet2 = Array.from(mySet);
+  console.log("set Array: ", mySet2); 
+
+
+  // why I cannot pass the value as variable: like result.length= value =3; 
+  // because of recursion ofcourse but don't yet found the reason....
+
+
   combinations(mySet2, result.length, 0, firstNumber);
 
   let finalResult = found;
 
-  console.log('finalResult: ', finalResult);
+  // any 3 combinations total equals to the first element... of the original Input....
+
+  console.log("Original input: ", ints );
+
+  console.log('[any 3 combinations total equals to the first element... of the original] finalResult: ', finalResult);
 
   // return ints.length; 
 
