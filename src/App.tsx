@@ -11,6 +11,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
+import CraftsManHome from "./CraftsManHome/CraftsManHome";
 
 export default function App() {
 
@@ -28,34 +29,34 @@ export default function App() {
 
 
 
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-            <li>
-              <Link to="/users">Users</Link>
-            </li>
+            {/*<li>*/}
+            {/*  <Link to="/about">About</Link>*/}
+            {/*</li>*/}
+            {/*<li>*/}
+            {/*  <Link to="/users">Users</Link>*/}
+            {/*</li>*/}
 
-            <li>
-              <Link to="/home2">Home2222</Link>
-            </li>
+            {/*<li>*/}
+            {/*  <Link to="/home2">Home2222</Link>*/}
+            {/*</li>*/}
 
-            <li>
-              <Link to="/hoc1">HOC1</Link>
-            </li>
-
-
-            <li>
-              <Link to="/hoc2">HOC2</Link>
-            </li>
+            {/*<li>*/}
+            {/*  <Link to="/hoc1">HOC1</Link>*/}
+            {/*</li>*/}
 
 
-            <li>
-              <Link to="/hoc3TZ">HOC3TZ</Link>
-            </li>
+            {/*<li>*/}
+            {/*  <Link to="/hoc2">HOC2</Link>*/}
+            {/*</li>*/}
 
-            <li>
-              <Link to="/">Home</Link>
-            </li>
+
+            {/*<li>*/}
+            {/*  <Link to="/hoc3TZ">HOC3TZ</Link>*/}
+            {/*</li>*/}
+
+            {/*<li>*/}
+            {/*  <Link to="/">Home</Link>*/}
+            {/*</li>*/}
 
 
           </ul>
@@ -134,7 +135,7 @@ let found = false;
 //   }
 // }
 
-// function ThreeSum(arr) { 
+// function ThreeSum(arr) {
 
 //   const firstNumber = arr[0];
 
@@ -150,22 +151,22 @@ let found = false;
 //   return found;
 
 // }
-   
-// keep this function call here 
+
+// keep this function call here
 // @ts-ignore
 // console.log(ThreeSum(readline()));
 
 
-// function LetterCount(str: string) { 
+// function LetterCount(str: string) {
 
-//     // code goes here  
+//     // code goes here
 
-    
+
 //     const words = str.split(' ');
 
 //     console.log('words: ', words);
-//     return str; 
-  
+//     return str;
+
 //   }
 
 //   console.log(LetterCount(readline()));
@@ -239,7 +240,7 @@ console.log(car.make);
 
 
     for (var i = 0; i < letters.length; i++) {
-     
+
       if (cache.hasOwnProperty(letters[i])) { // if letter was already seen
         counter2 = counter2 + 1;
       };
@@ -274,7 +275,7 @@ console.log(car.make);
 
 function LetterCount(str: string) {
 
-  // code goes here  
+  // code goes here
 
 
   const words = str.split(' ');
@@ -364,12 +365,12 @@ function ThreeSum(ints: Array<number>) {
 
   const mySet = new Set(otherNumber);
 
-  // const original =[2,3,1,5,4,-4,-3,-2]; 
+  // const original =[2,3,1,5,4,-4,-3,-2];
   const mySet2 = Array.from(mySet);
-  console.log("set Array: ", mySet2); 
+  console.log("set Array: ", mySet2);
 
 
-  // why I cannot pass the value as variable: like result.length= value =3; 
+  // why I cannot pass the value as variable: like result.length= value =3;
   // because of recursion ofcourse but don't yet found the reason....
 
 
@@ -383,11 +384,11 @@ function ThreeSum(ints: Array<number>) {
 
   console.log('[any 3 combinations total equals to the first element... of the original] finalResult: ', finalResult);
 
-  // return ints.length; 
+  // return ints.length;
 
 }
 
-// keep this function call here 
+// keep this function call here
 // console.log(ThreeSum(readline()));
 
 
@@ -401,9 +402,11 @@ App.tsx:19 Today, is the greatest day ever!
 
 
 function Home() {
-  return <h2>Home</h2>;
 
-  // return <Home/>;
+
+  // return <h2>Home</h2>;
+
+   return <CraftsManHome/>;
 
 
 }
