@@ -1,9 +1,8 @@
-
-
-
-
-
-import React, {useContext, useEffect, useRef, useState} from 'react';
+import React, {
+    useContext,
+    useEffect,
+    useRef,
+    useState} from 'react';
 import { Jumbotron, Container } from 'reactstrap';
 import FlatList from 'flatlist-react';
 
@@ -14,6 +13,19 @@ import {routeDataContextFinal, IInputString} from "./CraftsManHome";
 const ResultsComp =()=> {
 
     const routeContextInTabs = useContext<IInputString>(routeDataContextFinal);
+    const [error, setError] = useState(null);
+    const [isLoaded, setIsLoaded] = useState(false);
+    const [items, setItems] = useState([]);
+
+
+
+    // console.log('routeContextInTabs.postID: ',routeContextInTabs.postID);
+    // console.log('================================');
+    // console.log('**** routeContextInTabs.inputString: ',routeContextInTabs.inputString);
+    // console.log('================================');
+
+
+
 
     // console.log('routeContextInTabs.postID: ',routeContextInTabs.postID);
     console.log('================================');
@@ -21,6 +33,44 @@ const ResultsComp =()=> {
     console.log('================================');
 
 
+
+    useEffect(() => {
+
+        const url = `https://restcountries.eu/rest/v2/capital/${routeContextInTabs.inputString}`;
+
+        console.log("url: ===> ===> ===> ===> ", url);
+
+        fetch(url)
+        // fetch (`https://restcountries.eu/rest/v2/capital/${routeContextInTabs.inputString}`, {
+        //     method: 'POST',
+        //     headers: {
+        //         Accept: 'application/json',
+        //         'Content-Type': 'application/json',
+        //     },
+
+
+        // })
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    setIsLoaded(true);
+                    setItems(result);
+                },
+                // Note: it's important to handle errors here
+                // instead of a catch() block so that we don't swallow
+                // exceptions from actual bugs in components.
+                (error) => {
+                    setIsLoaded(true);
+                    setError(error);
+                }
+            )
+    }, [routeContextInTabs])
+
+// }, [urlContext.url]);
+
+
+
+    console.log("items ======= ==== ====== ===== : ",items);
     const people = [
         {firstName: 'Elson', lastName: 'Correia', info: {age: 24}},
         {firstName: 'John', lastName: 'Doe', info: {age: 18}},
