@@ -17,7 +17,7 @@ const ResultsComp =()=> {
 
     // console.log('routeContextInTabs.postID: ',routeContextInTabs.postID);
     console.log('================================');
-    console.log('routeContextInTabs.inputString: ',routeContextInTabs.inputString);
+    console.log('**** routeContextInTabs.inputString: ',routeContextInTabs.inputString);
     console.log('================================');
 
 

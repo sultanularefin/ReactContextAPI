@@ -10,36 +10,8 @@ export interface Props {
 
 
 
-
-    // repos:[],
-    // navigation: any,
-    // isLoading:boolean,
-    //
-    // userID:string,
-    // route:any,
-    // userName:string,
     hitJackPot: (value:string) => void,
-    // hitJackPot: () => string,
 
-    // sharedChatItemSwipedMain: (
-    //     chatID: string,
-    //     message:string,
-    //     sender_id:string,
-    //     receiver_id:string,
-    //     is_image:number,
-    //     payLoadString:string,
-    //     payloadImage:string,
-    // ) => void
-
-    // sharedChatItemSwipedMain: (
-    //     chatID: string,
-    //     message:string,
-    //     sender_id:string,
-    //     receiver_id:string,
-    //     is_image:number,
-    //     payLoadString:string,
-    //     payloadImage:string,
-    // ) => void
 
 
 
