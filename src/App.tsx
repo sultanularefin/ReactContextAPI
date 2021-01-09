@@ -1,9 +1,9 @@
 import React from "react";
-import HomePage from './homePage/HomePage'
+// import HomePage from './homePage/HomePage'
 
-import HOC1 from './hocs/HOC1';
-import HOC2 from './hocs/hoc2/HOC2';
-import HOC3TZ from './hocs/hoc3TZ/HOC3TZ';
+// import HOC1 from './hocs/HOC1';
+// import HOC2 from './hocs/hoc2/HOC2';
+// import HOC3TZ from './hocs/hoc3TZ/HOC3TZ';
 
 import {
   BrowserRouter as Router,
@@ -72,25 +72,25 @@ export default function App() {
             <Users />
           </Route>
 
-          <Route path="/hoc1">
-            <HOC1 />
-          </Route>
+          {/*<Route path="/hoc1">*/}
+          {/*  <HOC1 />*/}
+          {/*</Route>*/}
 
 
 
 
-          <Route path="/hoc2">
-            <HOC2 />
-          </Route>
+          {/*<Route path="/hoc2">*/}
+          {/*  <HOC2 />*/}
+          {/*</Route>*/}
 
-          <Route path="/hoc3TZ">
-            <HOC3TZ />
-          </Route>
+          {/*<Route path="/hoc3TZ">*/}
+          {/*  <HOC3TZ />*/}
+          {/*</Route>*/}
 
 
-          <Route path="/home2">
-            <HomePage />
-          </Route>
+          {/*<Route path="/home2">*/}
+          {/*  <HomePage />*/}
+          {/*</Route>*/}
           <Route path="/">
             <Home />
           </Route>
