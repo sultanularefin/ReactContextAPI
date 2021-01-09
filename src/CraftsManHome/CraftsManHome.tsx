@@ -6,8 +6,8 @@
 import React, { useEffect, useRef, useState } from 'react';
 // import React from 'react';
 import logo from './../logo.svg';
-import SearchComp from "./SearchComp";
-import ResultsComp from "./ResultsComp";
+import SearchComp from "./childrens/SearchComp";
+import ResultsComp from "./childrens/ResultsComp";
 
 
 
@@ -17,6 +17,7 @@ import ResultsComp from "./ResultsComp";
 // } from 'react-bootstrap/Jumbotron'
 
 import { Jumbotron, Container } from 'reactstrap';
+import DetailsPage from "./childrens/DetailsPage";
 // import './../App.css';
 
 // function CraftsManHome() {
@@ -49,7 +50,9 @@ const CraftsManHome=()=> {
 
     const [inputStringValueState, setInputStringValueState] =useState<IInputString>({
         inputString:''}
-        );
+    );
+
+    const [detailsDataState,setDetailsDataState] =useState('');
 
 
 
@@ -70,6 +73,25 @@ const CraftsManHome=()=> {
 
     };
 
+    const setDetailsData =  (value:string) => {
+
+        // const {postID} = routeContextInTabs;
+
+        console.log('value: ',value);
+
+        // const routeDataContext2 = Object.assign(routeDataContextFinal, {
+        //     // postID: postID,
+        //     inputString: value
+        // });
+        // setRouteDataState(routeDataContext2);
+
+        setDetailsDataState(value);
+
+
+    };
+
+
+
 
 
 
@@ -80,26 +102,73 @@ const CraftsManHome=()=> {
     return (
 
         <routeDataContextFinal.Provider value = {inputStringValueState}>
-            <div className="flex-container">
-                <div className="flex-child magenta">
-                    <SearchComp
-                        // value={}
-                        hitJackPot={(value:string) => {
-                            // Alert.alert('getChatMessage'),
-                            // alert(`value: ${value}`);
-                            // getChatMessage()
-                            setData(value);
-                        }
-                        }
-                    />
+
+
+            <div className="container">
+                <div className="row">
+                    <div className="col-sm">
+                        <SearchComp
+
+                            hitJackPot={(value:string) => {
+                                // Alert.alert('getChatMessage'),
+                                // alert(`value: ${value}`);
+                                // getChatMessage()
+                                setData(value);
+                            }
+                            }
+                        />
+                    </div>
+                    <div className="col-sm">
+
+
+                        <ResultsComp
+
+                            hitJackPot2={(value: string) => {
+                                setDetailsData(value);
+                            }
+                            }
+                        />
+
+
+
+                    </div>
+                    <div className="col-sm">
+
+
+                      <DetailsPage value={detailsDataState}
+
+
+
+
+                      />
+
+
+
+                    </div>
                 </div>
-
-                <div className="flex-child green">
-
-                    <ResultsComp/>
-                </div>
-
             </div>
+
+
+
+
+
+
+
+
+
+
+
+            {/*<div className="flex-container">*/}
+
+            {/*    <div className="flex-child magenta">*/}
+            {/*        Flex Column 1*/}
+            {/*    </div>*/}
+
+            {/*    <div className="flex-child green">*/}
+            {/*        Flex Column 2*/}
+            {/*    </div>*/}
+
+            {/*</div>*/}
 
         </routeDataContextFinal.Provider>
 

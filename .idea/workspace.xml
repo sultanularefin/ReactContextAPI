@@ -20,26 +20,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adcce60c-c388-49bd-8572-58637d841012" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/src/CraftsManHome/childrens/DetailsPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-<<<<<<< HEAD
+      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CraftsManHome/CraftsManHome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CraftsManHome/CraftsManHome.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CraftsManHome/ResultsComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CraftsManHome/ResultsComp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CraftsManHome/SearchComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CraftsManHome/SearchComp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/arefin_Ts_ventura/combination.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/arefin_Ts_ventura/combination.zip" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hocs/HOC1.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hocs/OldApp_exclude.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hocs/hoc2/HOC2.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hocs/hoc2/List.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hocs/hoc2/WithdLoading.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hocs/hoc3TZ/HOC3TZ.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hocs/hoc3TZ/List.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/hocs/hoc3TZ/WithdLoading.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/homePage/HomePage.tsx" beforeDir="false" />
-=======
-      <change beforePath="$PROJECT_DIR$/src/CraftsManHome/ResultsComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CraftsManHome/ResultsComp.tsx" afterDir="false" />
->>>>>>> a8dc784e802c0c32fee5133562b9249695cb2f7f
+      <change beforePath="$PROJECT_DIR$/src/CraftsManHome/ResultsComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CraftsManHome/childrens/ResultsComp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CraftsManHome/SearchComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CraftsManHome/childrens/SearchComp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,12 +64,13 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/CraftsManHome/childrens" />
+      <recent name="C:\Users\ViperHridoy\programs\typeScriptTestingAfterAWhile\src\hocs\hoc2" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/src" />
       <recent name="C:\Users\ViperHridoy\programs\typeScriptTestingAfterAWhile\src\hocs" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\ViperHridoy\programs\typeScriptTestingAfterAWhile\src\hocs\hoc2" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -96,15 +85,10 @@
       <workItem from="1603329136205" duration="66000" />
       <workItem from="1603340607504" duration="12084000" />
       <workItem from="1603370155645" duration="1522000" />
-<<<<<<< HEAD
       <workItem from="1609978340205" duration="6679000" />
-      <workItem from="1610159354567" duration="232000" />
-=======
-      <workItem from="1609978340205" duration="7065000" />
-      <workItem from="1610074317877" duration="2729000" />
-      <workItem from="1610121402047" duration="3793000" />
-      <workItem from="1610157505050" duration="1541000" />
->>>>>>> a8dc784e802c0c32fee5133562b9249695cb2f7f
+      <workItem from="1610159354567" duration="838000" />
+      <workItem from="1610206337627" duration="519000" />
+      <workItem from="1610207237859" duration="8344000" />
     </task>
     <servers />
   </component>
@@ -132,17 +116,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1603329112351" />
-<<<<<<< HEAD
-    <state x="102" y="12" width="1258" height="605" key="find.popup" timestamp="1610159473770">
+    <state x="102" y="12" width="1258" height="605" key="find.popup" timestamp="1610215764977">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
-    <state x="102" y="12" width="1258" height="605" key="find.popup/0.0.1366.735@0.0.1366.735" timestamp="1610159473770" />
-=======
-    <state x="388" y="115" width="589" height="502" key="find.popup" timestamp="1610158856830">
-      <screen x="0" y="0" width="1366" height="735" />
-    </state>
-    <state x="388" y="115" width="589" height="502" key="find.popup/0.0.1366.735@0.0.1366.735" timestamp="1610158856830" />
->>>>>>> a8dc784e802c0c32fee5133562b9249695cb2f7f
+    <state x="102" y="12" width="1258" height="605" key="find.popup/0.0.1366.735@0.0.1366.735" timestamp="1610215764977" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1603347934196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

@@ -6,7 +6,14 @@ import React, {
 import { Jumbotron, Container } from 'reactstrap';
 import FlatList from 'flatlist-react';
 
-import {routeDataContextFinal, IInputString} from "./CraftsManHome";
+import {routeDataContextFinal, IInputString} from "../CraftsManHome";
+// import {Props} from "./SearchComp";
+
+
+export interface Props {
+    hitJackPot2: (value:string) => void,
+}
+
 
 
 
@@ -70,23 +77,29 @@ export interface RootObject {
     flag: string;
     regionalBlocs: RegionalBloc[];
     cioc: string;
+    message: string,
+    status: number,
 }
 
 // }
 
 
 
+// const SearchComp: React.FC<Props> = ({
+//
+//                                          hitJackPot
+//                                      }) => {
 
+const ResultsComp: React.FC<Props> = ({
 
-const ResultsComp =()=> {
+                                          hitJackPot2
+                                      }) => {
 
 
     const routeContextInTabs = useContext<IInputString>(routeDataContextFinal);
     const [error, setError] = useState(null);
     const [isLoaded, setIsLoaded] = useState(false);
     const [items, setItems] = useState(
-
-
         new Array<{
 // id: string;
             // user_id: string;
@@ -102,8 +115,6 @@ const ResultsComp =()=> {
             // user_profile_photo: string;
             // suggested: [];
             // regionalBlocs: RegionalBloc[];
-
-
 
 
             name: string,
@@ -131,7 +142,7 @@ const ResultsComp =()=> {
                 symbol: string;
             };
             // languages: Language[];
-            languages:{
+            languages: {
                 iso639_1: string;
                 iso639_2: string;
                 name: string;
@@ -151,18 +162,19 @@ const ResultsComp =()=> {
                 fa: string;
             };
             flag: string;
-            regionalBlocs:{
+            regionalBlocs: {
                 acronym: string;
                 name: string;
                 otherAcronyms: any[];
                 otherNames: string[];
             };
+            message: string,
+            status: number,
 
 
             cioc: string;
         }>()
     );
-
 
 
     // console.log('routeContextInTabs.postID: ',routeContextInTabs.postID);
@@ -171,13 +183,10 @@ const ResultsComp =()=> {
     // console.log('================================');
 
 
-
-
     // console.log('routeContextInTabs.postID: ',routeContextInTabs.postID);
     console.log('================================');
-    console.log('**** routeContextInTabs.inputString: ',routeContextInTabs.inputString);
+    console.log('**** routeContextInTabs.inputString: ', routeContextInTabs.inputString);
     console.log('================================');
-
 
 
     useEffect(() => {
@@ -212,92 +221,64 @@ const ResultsComp =()=> {
             )
     }, [routeContextInTabs])
 
-// }, [urlContext.url]);
 
+    // render Final
 
-
-    // console.log("items ======= ==== ====== ===== : ",items);
-    // const people = [
-    //     {firstName: 'Elson', lastName: 'Correia', info: {age: 24}},
-    //     {firstName: 'John', lastName: 'Doe', info: {age: 18}},
-    //     {firstName: 'Jane', lastName: 'Doe', info: {age: 34}},
-    //     {firstName: 'Maria', lastName: 'Carvalho', info: {age: 22}},
-    //     {firstName: 'Kelly', lastName: 'Correia', info:{age: 23}},
-    //     {firstName: 'Don', lastName: 'Quichote', info: {age: 39}},
-    //     {firstName: 'Marcus', lastName: 'Correia', info: {age: 0}},
-    //     {firstName: 'Bruno', lastName: 'Gonzales', info: {age: 25}},
-    //     {firstName: 'Alonzo', lastName: 'Correia', info: {age: 44}}
-    // ];
-
-    const renderItems = (person:
-    //                          {
-    //     firstName: string,
-    //     lastName: string,
-    //     info: {
-    //         age:Number
-    //     }
-    // }
-                             RootObject
-        , idx: Number) => (
-        <li key={idx.toString()}>
-            <b>{person.name}</b>
-        </li>
-    );
+    // message: "Not Found"
+    console.log('items: ', items);
 
 
 
 
+       const content = (items === null)
+           ? null
+
+           :
+           (
+
+               items.map((
+                   post) =>
+                   <button onClick={
+                       () => {
+                           console.log(`post.name: ${post.name}`)
+                           hitJackPot2(post.name)
 
 
+                       }
 
-    return (
+                   } key={post.name} type="button" className="list-group-item list-group-item-action">
+                       {/*<h3>{post.title}</h3>*/}
+                       <p>{post.name}</p>
+                   </button>
+               ));
 
-
-
-        <Container style={{
-
-        }}>
-            {/*<FlatList*/}
-            {/*    list={items}*/}
-            {/*    renderItem={renderItems}*/}
-            {/*    renderWhenEmpty={() => <div>List is empty!</div>}*/}
-            {/*    sortBy={["firstName", {key: "lastName", descending: true}]}*/}
-            {/*    groupBy={ (person:*/}
-            {/*                   {*/}
-            {/*        firstName:string,*/}
-            {/*        lastName:string,*/}
-            {/*        info: {*/}
-            {/*            age:Number*/}
-            {/*        }*/}
-            {/*    }*/}
-            {/*    */}
-            {/*    ) => person.info.age > 18 ? 'Over 18' : 'Under 18'}*/}
-            {/*/>*/}
-
-            <FlatList
-                list={items}
-                renderItem={renderItems}
-                renderWhenEmpty={() => <div>List is empty!</div>}
-                sortBy={["firstName", {key: "lastName", descending: true}]}
-                groupBy={ (person: RootObject
-                           //                {
-                           //     firstName:string,
-                           //     lastName:string,
-                           //     info: {
-                           //         age:Number
-                           //     }
-                           // }
-
-                ) => person.name.length
-
-                }
-            />
-        </Container>
+       if (items.length === 0) {
+           return (
 
 
+               <div className="list-group">
+                   <p> empty list</p>
+               </div>
+           );
+       }
 
 
-    );
+       if (content !== null) {
+           return (
+               <div className="list-group">
+
+
+                   {content}
+               </div>
+           );
+       } else {
+           return (<div className="list-group">
+
+
+           </div>);
+
+   }
+
 }
 
 

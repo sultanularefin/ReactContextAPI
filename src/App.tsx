@@ -23,74 +23,13 @@ export default function App() {
   return (
     <Router>
       <div>
-        <nav>
-          <ul>
 
-
-
-
-            {/*<li>*/}
-            {/*  <Link to="/about">About</Link>*/}
-            {/*</li>*/}
-            {/*<li>*/}
-            {/*  <Link to="/users">Users</Link>*/}
-            {/*</li>*/}
-
-            {/*<li>*/}
-            {/*  <Link to="/home2">Home2222</Link>*/}
-            {/*</li>*/}
-
-            {/*<li>*/}
-            {/*  <Link to="/hoc1">HOC1</Link>*/}
-            {/*</li>*/}
-
-
-            {/*<li>*/}
-            {/*  <Link to="/hoc2">HOC2</Link>*/}
-            {/*</li>*/}
-
-
-            {/*<li>*/}
-            {/*  <Link to="/hoc3TZ">HOC3TZ</Link>*/}
-            {/*</li>*/}
-
-            {/*<li>*/}
-            {/*  <Link to="/">Home</Link>*/}
-            {/*</li>*/}
-
-
-          </ul>
-        </nav>
 
         {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
         <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/users">
-            <Users />
-          </Route>
-
-          {/*<Route path="/hoc1">*/}
-          {/*  <HOC1 />*/}
-          {/*</Route>*/}
 
 
-
-
-          {/*<Route path="/hoc2">*/}
-          {/*  <HOC2 />*/}
-          {/*</Route>*/}
-
-          {/*<Route path="/hoc3TZ">*/}
-          {/*  <HOC3TZ />*/}
-          {/*</Route>*/}
-
-
-          {/*<Route path="/home2">*/}
-          {/*  <HomePage />*/}
-          {/*</Route>*/}
           <Route path="/">
             <Home />
           </Route>
