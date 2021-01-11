@@ -20,14 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adcce60c-c388-49bd-8572-58637d841012" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/CraftsManHome/childrens/DetailsPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CraftsManHome/CraftsManHome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CraftsManHome/CraftsManHome.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CraftsManHome/ResultsComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CraftsManHome/childrens/ResultsComp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CraftsManHome/SearchComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CraftsManHome/childrens/SearchComp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CraftsManHome/childrens/DetailsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CraftsManHome/childrens/DetailsPage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/CraftsManHome/childrens/ResultsComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CraftsManHome/childrens/ResultsComp.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/typeScriptCodes/ArrayPush.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/typeScriptCodes/ArrayPush.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/typeScriptCodes/noPushAll_ListAddAllInTypeScript.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/typeScriptCodes/noPushAll_ListAddAllInTypeScript.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,7 +87,9 @@
       <workItem from="1609978340205" duration="6679000" />
       <workItem from="1610159354567" duration="838000" />
       <workItem from="1610206337627" duration="519000" />
-      <workItem from="1610207237859" duration="8344000" />
+      <workItem from="1610207237859" duration="8376000" />
+      <workItem from="1610242820133" duration="598000" />
+      <workItem from="1610383629839" duration="2134000" />
     </task>
     <servers />
   </component>
@@ -116,10 +117,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1603329112351" />
-    <state x="102" y="12" width="1258" height="605" key="find.popup" timestamp="1610215764977">
+    <state x="102" y="12" width="1258" height="605" key="find.popup" timestamp="1610385764530">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
-    <state x="102" y="12" width="1258" height="605" key="find.popup/0.0.1366.735@0.0.1366.735" timestamp="1610215764977" />
+    <state x="102" y="12" width="1258" height="605" key="find.popup/0.0.1366.735@0.0.1366.735" timestamp="1610385764530" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1603347934196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

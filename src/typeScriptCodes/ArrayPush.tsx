@@ -15,7 +15,7 @@ const ArrayPush =()=> {
           // path:string
           size: number;
         }>()
-    
+
       );
 
   // const pushedMetaDatas: {
@@ -33,7 +33,7 @@ const ArrayPush =()=> {
 
 
   if (imageURL2.length !== 0) {
-    //const pushedMetaDatas: any[]=[];// THIS WORKED...  
+    //const pushedMetaDatas: any[]=[];// THIS WORKED...
 
 
     const pushedMetaDatas: {
@@ -49,7 +49,7 @@ const ArrayPush =()=> {
 
       for (i; i < imageURL2.length; i++) {
 
-        console.log('i is => ', i);
+        // console.log('i is => ', i);
 
 
 
@@ -63,11 +63,11 @@ const ArrayPush =()=> {
 
 
 
-        console.log('additionalData.fileName', additionalData.fileName);
-        console.log('additionalData.itemName', additionalData.itemName);
-        console.log('additionalData.width', additionalData.width);
-        console.log('additionalData.contentType', additionalData.contentType);
-        console.log('additionalData.height', additionalData.height);
+        // console.log('additionalData.fileName', additionalData.fileName);
+        // console.log('additionalData.itemName', additionalData.itemName);
+        // console.log('additionalData.width', additionalData.width);
+        // console.log('additionalData.contentType', additionalData.contentType);
+        // console.log('additionalData.height', additionalData.height);
 
         // pushedMetaDatas.push({...additionalData});
 
@@ -75,7 +75,7 @@ const ArrayPush =()=> {
 
 
         //all all the urls to the list
-        console.log('i is : ', i);
+        // console.log('i is : ', i);
         // console.log('pushedMetaDatas[i].fileName: ',pushedMetaDatas[i].fileName);
 
       }
@@ -84,7 +84,7 @@ const ArrayPush =()=> {
       console.log('e: ', e);
     }
 
-    console.log('pushedMetaDatas: ', pushedMetaDatas);
+    // console.log('pushedMetaDatas: ', pushedMetaDatas);
 
     //setAvatarSourceStateEdit(pushedMetaDatas);
 
@@ -92,7 +92,7 @@ const ArrayPush =()=> {
 
   }
 
-  console.log('not imageURL ', !imageURL2);
+  // console.log('not imageURL ', !imageURL2);
 
 
 
@@ -107,12 +107,12 @@ const ArrayPush =()=> {
   // console.log('pushedMetaDatas[0].height',pushedMetaDatas[0].height);
 
   /*
-  
-   
-    
-     
-  
-  
+
+
+
+
+
+
   */
 
 

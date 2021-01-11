@@ -15,9 +15,9 @@ import CraftsManHome from "./CraftsManHome/CraftsManHome";
 
 export default function App() {
 
-  console.log('__________ ThreeSum',ThreeSum([10, 2, 3, 1, 5, 3, 1, 4, -4, -3, -2]));
+  // console.log('__________ ThreeSum',ThreeSum([10, 2, 3, 1, 5, 3, 1, 4, -4, -3, -2]));
 
-  console.log( "Result: ", LetterCount("Today, is the greatest day ever!"));
+  // console.log( "Result: ", LetterCount("Today, is the greatest day ever!"));
 
 
   return (
@@ -221,7 +221,7 @@ function LetterCount(str: string) {
 
   words.map((x: string) => checkletterCount(x));
   // console.log(finalString);
-  console.log('input string: ', str);
+  // console.log('input string: ', str);
   return finalString;
 
 }
@@ -306,7 +306,7 @@ function ThreeSum(ints: Array<number>) {
 
   // const original =[2,3,1,5,4,-4,-3,-2];
   const mySet2 = Array.from(mySet);
-  console.log("set Array: ", mySet2);
+  // console.log("set Array: ", mySet2);
 
 
   // why I cannot pass the value as variable: like result.length= value =3;
@@ -319,9 +319,9 @@ function ThreeSum(ints: Array<number>) {
 
   // any 3 combinations total equals to the first element... of the original Input....
 
-  console.log("Original input: ", ints );
+  // console.log("Original input: ", ints );
 
-  console.log('[any 3 combinations total equals to the first element... of the original] finalResult: ', finalResult);
+  // console.log('[any 3 combinations total equals to the first element... of the original] finalResult: ', finalResult);
 
   // return ints.length;
 

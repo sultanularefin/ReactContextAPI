@@ -60,7 +60,7 @@ const CraftsManHome=()=> {
 
         // const {postID} = routeContextInTabs;
 
-        console.log('value: ',value);
+        // console.log('value: ',value);
 
         // const routeDataContext2 = Object.assign(routeDataContextFinal, {
         //     // postID: postID,
@@ -77,7 +77,7 @@ const CraftsManHome=()=> {
 
         // const {postID} = routeContextInTabs;
 
-        console.log('value: ',value);
+        // console.log('value: ',value);
 
         // const routeDataContext2 = Object.assign(routeDataContextFinal, {
         //     // postID: postID,

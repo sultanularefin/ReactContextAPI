@@ -71,15 +71,7 @@ const noPushAll_ListAddAllInTypeScript =()=> {
 
 
 
-    // console.log('additionalData.fileName', additionalData.fileName);
-    // console.log('additionalData.uri', additionalData.uri);
-    // console.log('additionalData.contentType', additionalData.mime);
-    // console.log('additionalData.width', additionalData.width);
-    // console.log('additionalData.height', additionalData.height);
 
-    // pushedMetaDatas.push({...additionalData});
-
-    // pushedMetaDatas.push(12);
 
     pushedMetaDatas.push({ ...additionalData });
   }
@@ -93,7 +85,7 @@ const noPushAll_ListAddAllInTypeScript =()=> {
 
     width: number,
     height: number
-  }[] 
+  }[]
   */
  /*
   let avatarSourceState2:{
@@ -110,11 +102,11 @@ const noPushAll_ListAddAllInTypeScript =()=> {
     fileName: string, // name before query string...
     uri: string,
     mime: string,
-  
+
     width: number,
     height: number
-  }>; 
-  
+  }>;
+
   avatarSourceState2x= pushedMetaDatas.map((i) => {
     // console.log('received image', i);
     return {
@@ -138,11 +130,11 @@ const noPushAll_ListAddAllInTypeScript =()=> {
     fileName: string, // name before query string...
     uri: string,
     mime: string,
-  
+
     width: number,
     height: number
-  }>; 
-  
+  }>;
+
   avatarSourceState1x= pushedMetaDatas.map((i) => {
     // console.log('received image', i);
     return {
@@ -160,7 +152,7 @@ const noPushAll_ListAddAllInTypeScript =()=> {
 
     };
   });
- 
+
 
 /*
   let avatarSourceStateFromEdit2:{
@@ -179,10 +171,10 @@ let avatarSourceStateFromEdit2: Array<{
 
   width: number,
   height: number
-}>; 
+}>;
 
   avatarSourceStateFromEdit2=  pushedMetaDatas1.map((i) => {
-    // console.log('received image', i);
+
     return {
       fileName: i.fileName,
       uri: i.uri,
@@ -206,10 +198,10 @@ let avatarSourceStateFromEdit2: Array<{
     avatarSourceState1x.push(avatarSourceStateFromEdit2[j]);
   }
 
-  
-  console.info('pushedMetaDatas.length: ',pushedMetaDatas.length);
 
-  console.info('avatarSourceState1x.length: ',avatarSourceState1x.length);
+  // console.info('pushedMetaDatas.length: ',pushedMetaDatas.length);
+
+  // console.info('avatarSourceState1x.length: ',avatarSourceState1x.length);
 
 }
 

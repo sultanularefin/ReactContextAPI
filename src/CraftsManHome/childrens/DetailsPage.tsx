@@ -158,9 +158,9 @@ const DetailsPage: React.FC<Props> = (props)=> {
 
 
     // console.log('routeContextInTabs.postID: ',routeContextInTabs.postID);
-    console.log('================================');
-    console.log('**** routeContextInTabs.inputString: ',routeContextInTabs.inputString);
-    console.log('================================');
+    // console.log('================================');
+    // console.log('**** routeContextInTabs.inputString: ',routeContextInTabs.inputString);
+    // console.log('================================');
 
 
 
@@ -168,7 +168,7 @@ const DetailsPage: React.FC<Props> = (props)=> {
 
         const url = `https://restcountries.eu/rest/v2/capital/${routeContextInTabs.inputString}`;
 
-        console.log("url: ===> ===> ===> ===> ", url);
+        // console.log("url: ===> ===> ===> ===> ", url);
 
         fetch(url)
             // fetch (`https://restcountries.eu/rest/v2/capital/${routeContextInTabs.inputString}`, {
@@ -190,21 +190,20 @@ const DetailsPage: React.FC<Props> = (props)=> {
                 // instead of a catch() block so that we don't swallow
                 // exceptions from actual bugs in components.
                 (error) => {
+                    // alert(`error: ${error}`)
                     setIsLoaded(true);
                     setError(error);
                 }
-            )
+            ).catch((error)=>{
+            setIsLoaded(true);
+            setError(error);
+        })
     }, [routeContextInTabs])
 
 
 
 
-    const propsData = props;
 
-    // const allGroupChats = allItems.filter((oneItem) => oneItem.chat_type===2);
-    const filteredItems = items.filter((oneItem) =>  oneItem.name.toLowerCase() === propsData.value.toLowerCase());
-
-    console.log('filteredItems: =====  ', filteredItems);
 
     // const items2= items[0];
     //     const message2 = items2 === null
@@ -215,15 +214,18 @@ const DetailsPage: React.FC<Props> = (props)=> {
     //
     //     if(message2 === "Not Found") return null;
 
-    if(filteredItems.length===0){
+
+    if(error){
         return (
 
 
             <div className="list-group">
-                <p> none selected. </p>
+                <p> some error occurred. </p>
             </div>
         );
     }
+        //render Final 1.
+
 
 
 
@@ -231,6 +233,25 @@ const DetailsPage: React.FC<Props> = (props)=> {
 
 
     else {
+        const propsData = props;
+
+        // console.log("propsData: ", propsData);
+
+        // const allGroupChats = allItems.filter((oneItem) => oneItem.chat_type===2);
+        const filteredItems = items.filter((oneItem) =>  oneItem.name.toLowerCase() === propsData.value.toLowerCase());
+
+        // console.log('filteredItems: =====  ', filteredItems);
+
+        if (filteredItems.length===0){
+            return (
+
+
+                <div className="list-group">
+                    <p> none selected. </p>
+                </div>
+            );
+        }
+        else {
 
         const languagesAll = filteredItems[0].languages;
 
@@ -245,35 +266,38 @@ const DetailsPage: React.FC<Props> = (props)=> {
         // console.log('selectedIds: ', selectedIds);
 
 
-        return (
 
 
-            <div className="list-group">
-
-                <p>
-                    <label>
-                        Country Details: {propsData.value}
-
-                    </label>
-                </p>
-
-                <p> Country Name: {filteredItems[0].capital} </p>
-                <p> Capital: {filteredItems[0].capital} </p>
-                <p>
-                    Language: {filteredItems[0].languages.name}
-
-                {/*Interests:  {languagesAll.map((item:string) => (item !== null) && item.toLocaleLowerCase()).join(', ')}.*/}
-
-                     </p>
-                <p> Flag:
+            return (
 
 
-                    <img  src={filteredItems[0].flag}  style={{ width: 50, height: 50}} />
-                     </p>
-            </div>
+                <div className="list-group">
+
+                    <p>
+                        <label>
+                            Country Details: {propsData.value}
+
+                        </label>
+                    </p>
+
+                    <p> Country Name: {filteredItems[0].capital} </p>
+                    <p> Capital: {filteredItems[0].capital} </p>
+                    <p>
+                        Language: {filteredItems[0].languages.name}
+
+                        {/*Interests:  {languagesAll.map((item:string) => (item !== null) && item.toLocaleLowerCase()).join(', ')}.*/}
+
+                    </p>
+                    <p> Flag:
 
 
-        );
+                        <img src={filteredItems[0].flag} style={{width: 50, height: 50}}/>
+                    </p>
+                </div>
+
+
+            );
+        }
     }
 }
 

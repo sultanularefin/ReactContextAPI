@@ -184,16 +184,16 @@ const ResultsComp: React.FC<Props> = ({
 
 
     // console.log('routeContextInTabs.postID: ',routeContextInTabs.postID);
-    console.log('================================');
-    console.log('**** routeContextInTabs.inputString: ', routeContextInTabs.inputString);
-    console.log('================================');
+    // console.log('================================');
+    // console.log('**** routeContextInTabs.inputString: ', routeContextInTabs.inputString);
+    // console.log('================================');
 
 
     useEffect(() => {
 
         const url = `https://restcountries.eu/rest/v2/capital/${routeContextInTabs.inputString}`;
 
-        console.log("url: ===> ===> ===> ===> ", url);
+        // console.log("url: ===> ===> ===> ===> ", url);
 
         fetch(url)
             // fetch (`https://restcountries.eu/rest/v2/capital/${routeContextInTabs.inputString}`, {
@@ -217,8 +217,14 @@ const ResultsComp: React.FC<Props> = ({
                 (error) => {
                     setIsLoaded(true);
                     setError(error);
+                    setItems([]);
                 }
-            )
+            ).catch((error)=>{
+            setIsLoaded(true);
+            setError(error);
+            setItems([]);
+
+        })
     }, [routeContextInTabs])
 
 
@@ -228,56 +234,60 @@ const ResultsComp: React.FC<Props> = ({
     console.log('items: ', items);
 
 
+    // conditon 1....
+    if (items.length === 0) {
+        return (
 
 
-       const content = (items === null)
-           ? null
+            <div className="list-group">
+                <p> empty list</p>
+            </div>
+        );
+    }
 
-           :
-           (
-
-               items.map((
-                   post) =>
-                   <button onClick={
-                       () => {
-                           console.log(`post.name: ${post.name}`)
-                           hitJackPot2(post.name)
+    else if (error){
+        return (
 
 
-                       }
-
-                   } key={post.name} type="button" className="list-group-item list-group-item-action">
-                       {/*<h3>{post.title}</h3>*/}
-                       <p>{post.name}</p>
-                   </button>
-               ));
-
-       if (items.length === 0) {
-           return (
+            <div className="list-group">
+                <p> some error in Results component</p>
+            </div>
+        );
+    }
 
 
-               <div className="list-group">
-                   <p> empty list</p>
-               </div>
-           );
-       }
+
+    else{
+        const content = (Array.isArray(items) && !(items.length))
+            ? "[empty]"
+
+            :
+            (
+
+                items.map((
+                    post) =>
+                    <button onClick={
+                        () => {
+                            console.log(`post.name: ${post.name}`)
+                            hitJackPot2(post.name)
 
 
-       if (content !== null) {
-           return (
-               <div className="list-group">
+                        }
+
+                    } key={post.name} type="button" className="list-group-item list-group-item-action">
+                        {/*<h3>{post.title}</h3>*/}
+                        <p>{post.name}</p>
+                    </button>
+                ));
+
+        return (
+            <div className="list-group">
 
 
-                   {content}
-               </div>
-           );
-       } else {
-           return (<div className="list-group">
-
-
-           </div>);
-
-   }
+                {content}
+            </div>
+        );
+    }
 
 }
 
