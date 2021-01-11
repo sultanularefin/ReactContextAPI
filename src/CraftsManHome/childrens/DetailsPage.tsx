@@ -189,16 +189,19 @@ const DetailsPage: React.FC<Props> = (props)=> {
                 // Note: it's important to handle errors here
                 // instead of a catch() block so that we don't swallow
                 // exceptions from actual bugs in components.
-                (error) => {
+                (error3) => {
                     // alert(`error: ${error}`)
                     setIsLoaded(true);
-                    setError(error);
+                    setItems([]);
+                    setError(error3);
                 }
-            ).catch((error)=>{
+            ).catch((error4)=>{
+
+            console.log("error4: ", error4);
             setIsLoaded(true);
-            setError(error);
-        })
-    }, [routeContextInTabs])
+            setError(error4);
+        });
+    }, [routeContextInTabs]);
 
 
 
@@ -215,14 +218,27 @@ const DetailsPage: React.FC<Props> = (props)=> {
     //     if(message2 === "Not Found") return null;
 
 
-    if(error){
-        return (
+    if (error) {
+
+        if (Array.isArray(items) && !(items.length)) {
+
+            return (
 
 
-            <div className="list-group">
-                <p> some error occurred. </p>
-            </div>
-        );
+                <div className="list-group">
+                    <p> empty </p>
+                </div>
+            );
+        }
+        else {
+            return (
+
+
+                <div className="list-group">
+                    <p> some error occurred. </p>
+                </div>
+            );
+        }
     }
         //render Final 1.
 
@@ -242,7 +258,7 @@ const DetailsPage: React.FC<Props> = (props)=> {
 
         // console.log('filteredItems: =====  ', filteredItems);
 
-        if (filteredItems.length===0){
+        if (filteredItems.length === 0) {
             return (
 
 
@@ -253,17 +269,17 @@ const DetailsPage: React.FC<Props> = (props)=> {
         }
         else {
 
-        const languagesAll = filteredItems[0].languages;
+            const languagesAll = filteredItems[0].languages;
 
 
-        // languagesAll.map(oneLanguage: { iso639_1: string,
-        //     iso639_2: string,
-        //     name: string,
-        //     nativeName: string}) =>
-        //
-        // item.id);
+            // languagesAll.map(oneLanguage: { iso639_1: string,
+            //     iso639_2: string,
+            //     name: string,
+            //     nativeName: string}) =>
+            //
+            // item.id);
 
-        // console.log('selectedIds: ', selectedIds);
+            // console.log('selectedIds: ', selectedIds);
 
 
 
@@ -299,7 +315,7 @@ const DetailsPage: React.FC<Props> = (props)=> {
             );
         }
     }
-}
+};
 
 
 export default DetailsPage;

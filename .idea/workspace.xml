@@ -20,13 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="adcce60c-c388-49bd-8572-58637d841012" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.eslintrc" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CraftsManHome/CraftsManHome.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CraftsManHome/CraftsManHome.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CraftsManHome/childrens/DetailsPage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CraftsManHome/childrens/DetailsPage.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/CraftsManHome/childrens/ResultsComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CraftsManHome/childrens/ResultsComp.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typeScriptCodes/ArrayPush.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/typeScriptCodes/ArrayPush.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/typeScriptCodes/noPushAll_ListAddAllInTypeScript.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/typeScriptCodes/noPushAll_ListAddAllInTypeScript.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +89,7 @@
       <workItem from="1610206337627" duration="519000" />
       <workItem from="1610207237859" duration="8376000" />
       <workItem from="1610242820133" duration="598000" />
-      <workItem from="1610383629839" duration="2134000" />
+      <workItem from="1610383629839" duration="4494000" />
     </task>
     <servers />
   </component>
@@ -117,10 +117,10 @@
       <screen x="0" y="0" width="1366" height="728" />
     </state>
     <state x="184" y="9" key="SettingsEditor/0.0.1366.728@0.0.1366.728" timestamp="1603329112351" />
-    <state x="102" y="12" width="1258" height="605" key="find.popup" timestamp="1610385764530">
+    <state x="102" y="12" width="1258" height="605" key="find.popup" timestamp="1610387931013">
       <screen x="0" y="0" width="1366" height="735" />
     </state>
-    <state x="102" y="12" width="1258" height="605" key="find.popup/0.0.1366.735@0.0.1366.735" timestamp="1610385764530" />
+    <state x="102" y="12" width="1258" height="605" key="find.popup/0.0.1366.735@0.0.1366.735" timestamp="1610387931013" />
     <state x="616" y="240" key="run.anything.popup" timestamp="1603347934196">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

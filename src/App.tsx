@@ -21,23 +21,23 @@ export default function App() {
 
 
   return (
-    <Router>
-      <div>
+      <Router>
+        <div>
 
 
-        {/* A <Switch> looks through its children <Route>s and
+          {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-        <Switch>
+          <Switch>
 
 
-          <Route path="/">
-            <Home />
-          </Route>
+            <Route path="/">
+              <Home />
+            </Route>
 
 
-        </Switch>
-      </div>
-    </Router>
+          </Switch>
+        </div>
+      </Router>
   );
 }
 
@@ -111,7 +111,7 @@ let found = false;
 //   console.log(LetterCount(readline()));
 
 
-  // console.log(LetterCount("Today, is the greatest day ever!"));
+// console.log(LetterCount("Today, is the greatest day ever!"));
 
 
 let count = -1;
@@ -273,6 +273,7 @@ function combinations(input: Array<number>, len: number, start: number, firstNum
     // combinations(original, 3-1, 0+1, firstNumber)
     combinations(input, len - 1, i + 1, firstNumber);
   }
+
 }
 
 
@@ -286,17 +287,17 @@ function ThreeSum(ints: Array<number>) {
   // slice: a slice of the company's revenue
   // slice : a share of something.
 
-    // splice: a junction where two things ( as paper, film or magnetic tape) have been joined together.
+  // splice: a junction where two things ( as paper, film or magnetic tape) have been joined together.
 
-    // "The couple got spliced on Hawaii"
-    //  Perform a marriage ceremony
-    // const months = ['Jan', 'March', 'April', 'June'];
-    // months.splice(1, 0, 'Feb');
+  // "The couple got spliced on Hawaii"
+  //  Perform a marriage ceremony
+  // const months = ['Jan', 'March', 'April', 'June'];
+  // months.splice(1, 0, 'Feb');
 
-    // let arrDeletedItems = array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
+  // let arrDeletedItems = array.splice(start[, deleteCount[, item1[, item2[, ...]]]])
 
 
-    // const otherNumber = ints.slice(1, ints.length);
+  // const otherNumber = ints.slice(1, ints.length);
   const otherNumber = ints.slice(1, ints.length-1);
 
   // The slice() method returns a shallow copy of a portion of an array into a new array object selected from start to end
@@ -315,7 +316,7 @@ function ThreeSum(ints: Array<number>) {
 
   combinations(mySet2, result.length, 0, firstNumber);
 
-  let finalResult = found;
+  const finalResult = found;
 
   // any 3 combinations total equals to the first element... of the original Input....
 
@@ -328,7 +329,7 @@ function ThreeSum(ints: Array<number>) {
 }
 
 // keep this function call here
-// console.log(ThreeSum(readline()));
+// Console.log(ThreeSum(readline()));
 
 
 
@@ -345,7 +346,7 @@ function Home() {
 
   // return <h2>Home</h2>;
 
-   return <CraftsManHome/>;
+  return <CraftsManHome/>;
 
 
 }

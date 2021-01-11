@@ -3,8 +3,8 @@ import React, {
     useEffect,
     useRef,
     useState} from 'react';
-import { Jumbotron, Container } from 'reactstrap';
-import FlatList from 'flatlist-react';
+// import { Jumbotron, Container } from 'reactstrap';
+// import FlatList from 'flatlist-react';
 
 import {routeDataContextFinal, IInputString} from "../CraftsManHome";
 // import {Props} from "./SearchComp";
@@ -214,18 +214,18 @@ const ResultsComp: React.FC<Props> = ({
                 // Note: it's important to handle errors here
                 // instead of a catch() block so that we don't swallow
                 // exceptions from actual bugs in components.
-                (error) => {
+                (error3) => {
                     setIsLoaded(true);
-                    setError(error);
+                    setError(error3);
                     setItems([]);
                 }
-            ).catch((error)=>{
+            ).catch((error2)=>{
             setIsLoaded(true);
-            setError(error);
+            setError(error2);
             setItems([]);
 
-        })
-    }, [routeContextInTabs])
+        });
+    }, [routeContextInTabs]);
 
 
     // render Final
