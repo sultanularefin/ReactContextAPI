@@ -183,6 +183,7 @@ const DetailsPage: React.FC<Props> = (props)=> {
             .then(res => res.json())
             .then(
                 (result) => {
+                    setError(null);
                     setIsLoaded(true);
                     setItems(result);
                 },
@@ -251,14 +252,10 @@ const DetailsPage: React.FC<Props> = (props)=> {
     else {
         const propsData = props;
 
-        // console.log("propsData: ", propsData);
+        console.log("propsData.value ", propsData.value);
 
-        // const allGroupChats = allItems.filter((oneItem) => oneItem.chat_type===2);
-        const filteredItems = items.filter((oneItem) =>  oneItem.name.toLowerCase() === propsData.value.toLowerCase());
-
-        // console.log('filteredItems: =====  ', filteredItems);
-
-        if (filteredItems.length === 0) {
+        if (propsData.value.trim() === "")
+        {
             return (
 
 
@@ -268,6 +265,10 @@ const DetailsPage: React.FC<Props> = (props)=> {
             );
         }
         else {
+            // const allGroupChats = allItems.filter((oneItem) => oneItem.chat_type===2);
+            const filteredItems = items.filter((oneItem) =>  oneItem.name.toLowerCase() === propsData.value.toLowerCase());
+
+            // console.log('filteredItems: =====  ', filteredItems);
 
             const languagesAll = filteredItems[0].languages;
 

@@ -90,10 +90,7 @@ export interface RootObject {
 //                                          hitJackPot
 //                                      }) => {
 
-const ResultsComp: React.FC<Props> = ({
-
-                                          hitJackPot2
-                                      }) => {
+const ResultsComp: React.FC<Props> = (props) => {
 
 
     const routeContextInTabs = useContext<IInputString>(routeDataContextFinal);
@@ -208,6 +205,7 @@ const ResultsComp: React.FC<Props> = ({
             .then(res => res.json())
             .then(
                 (result) => {
+                    setError(null);
                     setIsLoaded(true);
                     setItems(result);
                 },
@@ -245,51 +243,81 @@ const ResultsComp: React.FC<Props> = ({
         );
     }
 
-    else if (error){
-        return (
+    else if (error) {
+
+        if (Array.isArray(items) && !(items.length)) {
+
+            return (
 
 
-            <div className="list-group">
-                <p> some error in Results component</p>
-            </div>
-        );
+                <div className="list-group">
+                    <p> empty </p>
+                </div>
+            );
+        }
+        else {
+            return (
+
+
+                <div className="list-group">
+                    <p> some error in Results component</p>
+                </div>
+            );
+        }
     }
 
 
 
     else{
-        const content = (Array.isArray(items) && !(items.length))
-            ? "[empty]"
 
-            :
-            (
+        const statusChecking = items[0];
 
-                items.map((
-                    post) =>
-                    <button onClick={
-                        () => {
-                            console.log(`post.name: ${post.name}`)
-                            hitJackPot2(post.name)
+        if (statusChecking.status !== 404) {
 
+            const content = (Array.isArray(items) && !(items.length))
+                ? "[empty]"
 
-                        }
+                :
+                (
 
-                    } key={post.name} type="button" className="list-group-item list-group-item-action">
-                        {/*<h3>{post.title}</h3>*/}
-                        <p>{post.name}</p>
-                    </button>
-                ));
-
-        return (
-            <div className="list-group">
+                    items.map((
+                        post) =>
+                        <button onClick={
+                            () => {
+                                console.log(`post.name: ${post.name}`);
+                                props.hitJackPot2(post.name);
 
 
-                {content}
-            </div>
-        );
+                            }
+
+                        } key={post.name} type="button" className="list-group-item list-group-item-action">
+                            {/*<h3>{post.title}</h3>*/}
+                            <p>{post.name}</p>
+                        </button>
+                    ));
+
+            return (
+                <div className="list-group">
+
+
+                    {content}
+                </div>
+            );
+        }
+        else
+        {
+
+            return (
+                <div className="list-group">
+
+
+                    <p> no data found for the search string </p>
+                </div>
+            );
+        }
     }
 
-}
+};
 
 
 export default ResultsComp;
