@@ -1,8 +1,10 @@
 import React, {
+    ReactNode,
     useContext,
     useEffect,
     useRef,
-    useState} from 'react';
+    useState
+} from 'react';
 // import { Jumbotron, Container } from 'reactstrap';
 // import FlatList from 'flatlist-react';
 
@@ -90,7 +92,15 @@ export interface RootObject {
 //                                          hitJackPot
 //                                      }) => {
 
+ // const ResultsComp = ({props}: { children?: ReactNode }) => {
+
+// const DetailsPage: React.FC<Props> = (props)=> {
 const ResultsComp: React.FC<Props> = (props) => {
+
+
+    // Alert.alert(`${props}`);
+
+// const ResultsComp =({}) React.FC<Props> = (props) => {
 
 
     const routeContextInTabs = useContext<IInputString>(routeDataContextFinal);
@@ -229,11 +239,23 @@ const ResultsComp: React.FC<Props> = (props) => {
     // render Final
 
     // message: "Not Found"
-    console.log('items: ', items);
+    // console.log('items: ', items);
+
+    // if((Object.entries(items).length === 0) && (items.constructor === Object)){
+    //     if(items.status===404){
+    //         return    (
+    //             <div className="list-group">
+    //             <p> 404
+    //             </p>
+    //         </div>
+    //         );
+    //     }
+    // }
+
 
 
     // conditon 1....
-    if (items.length === 0) {
+     if (items.length === 0) {
         return (
 
 
