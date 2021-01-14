@@ -19,10 +19,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="adcce60c-c388-49bd-8572-58637d841012" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/CraftsManHome/childrens/ResultsComp.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/CraftsManHome/childrens/ResultsComp.tsx" afterDir="false" />
-    </list>
+    <list default="true" id="adcce60c-c388-49bd-8572-58637d841012" name="Default Changelist" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -87,7 +84,7 @@
       <workItem from="1610383629839" duration="4527000" />
       <workItem from="1610407806562" duration="2556000" />
       <workItem from="1610468368481" duration="2371000" />
-      <workItem from="1610501322929" duration="800000" />
+      <workItem from="1610501322929" duration="912000" />
     </task>
     <servers />
   </component>
